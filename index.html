@@ -9,58 +9,71 @@
   <body>
     <header class="header">
       <img
-        class="header__image"
+        class="header_image"
         src="./eisenhower-matrix.jpg"
         alt="Eisenhower matrix"
       />
       <a
-        class="header__link"
+        class="header_link"
         href="https://goal-life.com/page/method/matrix-eisenhower"
         >Want more details?</a
       >
     </header>
     <main class="app">
       <p>
-        <label class="task-form__label" for="new-task">Add Item</label>
+        <label class="task_form_label" for="new-task">Add Item</label>
       </p>
-      <div class="task-form">
-        <input id="new-task" class="task-form__input" type="text" />
+      <div class="task_form">
+        <input id="new-task" class="task_form_input" type="text" />
         <button id="add-task" type="button">Add</button>
       </div>
-      <h2 class="app__heading">Todo</h2>
-      <ul class="task-list" id="incompleteTasks">
+      <h2 class="app_heading">Todo</h2>
+      <ul class="task_list" id="incompleteTasks">
         <li class="task">
-          <input type="checkbox" aria-label="Toggle task completion" />
-          <label class="task__label">Pay Bills</label>
-          <input type="text" class="task__input" aria-label="Edit task" />
-          <button class="task__edit" type="button">Edit</button>
-          <button class="task__delete" type="button" aria-label="Delete task">
+          <input
+            class="task_checkbox"
+            type="checkbox"
+            aria-label="Toggle task completion"
+          />
+          <label class="task_label">Pay Bills</label>
+          <input type="text" class="task_input" aria-label="Edit task" />
+          <button class="task_edit" type="button">Edit</button>
+          <button class="task_delete" type="button" aria-label="Delete task">
             <img src="./remove.svg" alt="" />
           </button>
         </li>
-        <li class="task task--editing">
-          <input type="checkbox" aria-label="Toggle task completion" />
-          <label class="task__label">Go Shopping</label>
+        <li class="task task_editing">
+          <input
+            class="task_checkbox"
+            type="checkbox"
+            aria-label="Toggle task completion"
+          />
+          <label class="task_label">Go Shopping</label>
           <input
             type="text"
             value="Go Shopping"
-            class="task__input"
+            class="task_input"
             aria-label="Edit task"
           />
-          <button class="task__edit" type="button">Save</button>
-          <button class="task__delete" type="button" aria-label="Delete task">
+          <button class="task_edit" type="button">Save</button>
+          <button class="task_delete" type="button" aria-label="Delete task">
             <img src="./remove.svg" alt="" />
           </button>
         </li>
       </ul>
-      <h2 class="app__heading">Completed</h2>
-      <ul class="task-list task-list--completed" id="completed-tasks">
+      <h2 class="app_heading">Completed</h2>
+      <ul class="task_list task_list_completed" id="completed-tasks">
         <li class="task">
-          <input type="checkbox" checked aria-label="Toggle task completion" />
-          <label class="task__label">See the Doctor</label>
-          <input type="text" class="task__input" aria-label="Edit task" />
-          <button class="task__edit" type="button">Edit</button>
-          <button class="task__delete" type="button" aria-label="Delete task">
+          <input
+            class="task_checkbox"
+            type="checkbox"
+            checked
+            aria-label="Toggle task completion"
+          />
+          <label class="task_label">See the Doctor</label>
+          <input type="text" class="task_input" aria-label="Edit task" />
+          <button class="task_edit" type="button">Edit</button>
+          <button class="task_delete" type="button" aria-label="Delete task">
             <img src="./remove.svg" alt="" />
           </button>
         </li>
