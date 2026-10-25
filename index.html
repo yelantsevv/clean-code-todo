@@ -25,15 +25,15 @@
     </header>
     <main class="app">
       <p id="topSectionForAddingElementToList">
-        <label for="new-task">Add Item</label>
+        <label class="task-form__label" for="new-task">Add Item</label>
       </p>
       <div class="task-form">
         <input id="new-task" class="task-form__input" type="text" /><button>
           Add
         </button>
       </div>
-      <h3>Todo</h3>
-      <ul id="incompleteTasks">
+      <h3 class="app__heading">Todo</h3>
+      <ul class="task-list" id="incompleteTasks">
         <li class="task">
           <input type="checkbox" /><label class="task__label">Pay Bills</label
           ><input type="text" class="task__input" /><button class="task__edit">
@@ -49,8 +49,8 @@
           ><button class="task__delete"><img src="./remove.svg" /></button>
         </li>
       </ul>
-      <h3>Completed</h3>
-      <ul id="completed-tasks">
+      <h3 class="app__heading">Completed</h3>
+      <ul class="task-list task-list--completed" id="completed-tasks">
         <li class="task">
           <input type="checkbox" checked /><label class="task__label"
             >See the Doctor</label
