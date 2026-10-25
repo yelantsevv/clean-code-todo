@@ -1,7 +1,7 @@
-const newTaskInput = document.getElementById('new-task');
-const addTaskButton = document.getElementById('add-task');
-const todoList = document.getElementById('incompleteTasks');
-const completedList = document.getElementById('completed-tasks');
+const newTaskInput = document.getElementById('new_task');
+const addTaskButton = document.getElementById('add_task');
+const todoList = document.getElementById('incomplete_tasks');
+const completedList = document.getElementById('completed_tasks');
 
 const createElement = function (
   elementTag,
