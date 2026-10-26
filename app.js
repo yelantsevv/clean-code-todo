@@ -15,7 +15,7 @@ const createElement = function (tagName, { className, type, text } = {}) {
 };
 
 const createTaskElement = function (taskText) {
-  const taskItem = createElement('li', { className: 'task' });
+  const taskItem = createElement('li');
   const checkbox = createElement('input', { type: 'checkbox' });
   const taskLabel = createElement('label', {
     className: 'task',
