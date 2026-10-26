@@ -82,6 +82,7 @@ h3,
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  flex-grow: 1;
 }
 .new_task_input:focus,
 .task_edit_input:focus {
