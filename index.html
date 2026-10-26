@@ -1,19 +1,84 @@
-<html>
-<HEAD><title>Todo App</title>
-<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="style.css" type="text/css" MEDIA="screen" charset="utf-8">
-</HEAD>
-<body>
-<div class="aaa"><img src="./eisenhower-matrix.jpg"><a class='more_inf' href="https://goal-life.com/page/method/matrix-eisenhower">Want more details&quest;</a></div>
-<div class="centered-main-page-element"><p id='topSectionForAddingElementToList'><label for="new-task">Add Item</label><div class="task-row-wrapper"><input id='new-task'class="task" type="text"><button>Add</button></div>
-</p><h3>Todo</h3>
-<ul id='incompleteTasks'>
-<li><input type='checkbox'><label class="task">Pay Bills</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button></li>
-<li class="editMode"><input type="checkbox"><label class="task">Go Shopping</label><input type="text" value="Go Shopping" class="task"><button class='edit'>Save</button><button class="delete"><img src="./remove.svg"></button></li>
-</ul><h3>Completed</h3><ul id="completed-tasks"><li><input type="checkbox" checked><label class="task">See the Doctor</label><input type="text" class="task"><button class="edit">Edit</button><button class="delete"><img src="./remove.svg"></button>
-</li>
-</ul>
-</div>
-<script type="text/javascript" SRC="app.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="header_image"
+        src="./eisenhower-matrix.jpg"
+        alt="Eisenhower matrix"
+      />
+      <a
+        class="header_link"
+        href="https://goal-life.com/page/method/matrix-eisenhower"
+        >Want more details?</a
+      >
+    </header>
+    <main class="app">
+      <p>
+        <label class="task_form_label" for="new_task">Add Item</label>
+      </p>
+      <div class="task_form">
+        <input id="new_task" class="task_form_input" type="text" />
+        <button id="add_task" type="button">Add</button>
+      </div>
+      <h2 class="app_heading">Todo</h2>
+      <ul class="task_list" id="incomplete_tasks">
+        <li class="task">
+          <input
+            class="task_checkbox"
+            type="checkbox"
+            aria-label="Toggle task completion"
+          />
+          <label class="task_label">Pay Bills</label>
+          <input type="text" class="task_input" aria-label="Edit task" />
+          <button class="task_edit" type="button">Edit</button>
+          <button class="task_delete" type="button" aria-label="Delete task">
+            <img src="./remove.svg" alt="" />
+          </button>
+        </li>
+        <li class="task task_editing">
+          <input
+            class="task_checkbox"
+            type="checkbox"
+            aria-label="Toggle task completion"
+          />
+          <label class="task_label">Go Shopping</label>
+          <input
+            type="text"
+            value="Go Shopping"
+            class="task_input"
+            aria-label="Edit task"
+          />
+          <button class="task_edit" type="button">Save</button>
+          <button class="task_delete" type="button" aria-label="Delete task">
+            <img src="./remove.svg" alt="" />
+          </button>
+        </li>
+      </ul>
+      <h2 class="app_heading">Completed</h2>
+      <ul class="task_list task_list_completed" id="completed_tasks">
+        <li class="task">
+          <input
+            class="task_checkbox"
+            type="checkbox"
+            checked
+            aria-label="Toggle task completion"
+          />
+          <label class="task_label">See the Doctor</label>
+          <input type="text" class="task_input" aria-label="Edit task" />
+          <button class="task_edit" type="button">Edit</button>
+          <button class="task_delete" type="button" aria-label="Delete task">
+            <img src="./remove.svg" alt="" />
+          </button>
+        </li>
+      </ul>
+    </main>
+    <script src="app.js"></script>
+  </body>
 </html>
