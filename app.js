@@ -3,29 +3,35 @@ const addTaskButton = document.getElementsByTagName('button')[0];
 const todoList = document.getElementById('incompleteTasks');
 const completedList = document.getElementById('completed-tasks');
 
+const createElement = function (tagName, { className, type, text } = {}) {
+  const element = document.createElement(tagName);
+  if (className) element.className = className;
+  if (type) element.type = type;
+  if (text) {
+    // Render task text without parsing it as HTML.
+    element.innerText = text;
+  }
+  return element;
+};
+
 const createTaskElement = function (taskText) {
-  const taskItem = document.createElement('li');
+  const taskItem = createElement('li', { className: 'task' });
+  const checkbox = createElement('input', { type: 'checkbox' });
+  const taskLabel = createElement('label', {
+    className: 'task',
+    text: taskText,
+  });
+  const taskEditInput = createElement('input', {
+    className: 'task',
+    type: 'text',
+  });
+  const editButton = createElement('button', {
+    className: 'edit',
+    text: 'Edit',
+  });
+  const deleteButton = createElement('button', { className: 'delete' });
+  const deleteIcon = createElement('img');
 
-  const checkbox = document.createElement('input');
-  const taskLabel = document.createElement('label');
-  const taskEditInput = document.createElement('input');
-  const editButton = document.createElement('button');
-
-  const deleteButton = document.createElement('button');
-  const deleteIcon = document.createElement('img');
-
-  // Render task text without parsing it as HTML.
-  taskLabel.innerText = taskText;
-  taskLabel.className = 'task';
-
-  checkbox.type = 'checkbox';
-  taskEditInput.type = 'text';
-  taskEditInput.className = 'task';
-
-  editButton.innerText = 'Edit';
-  editButton.className = 'edit';
-
-  deleteButton.className = 'delete';
   deleteIcon.src = './remove.svg';
   deleteButton.appendChild(deleteIcon);
 
